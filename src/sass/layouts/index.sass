@@ -3,11 +3,12 @@
 	margin: 0
 	padding: 0
 
+// Шаблон колонок, после чего в зависимости от способа решения задачи шаблону добавляется префикс a-, либо b- либо с- и тд. После чего используем директиву @extend и дополняем код в зависимости от случая.
+
 .mst
 	font-family: 'Open Sans', sans-serif
 
-
-.mst-wrapper
+.mst_wrapper
 	height: auto
 	min-height: 100vh
 	min-width: 100vw
@@ -15,7 +16,7 @@
 	background: #D7DBD2
 	border-bottom: 2px solid #ffffff
 
-.mst-title
+.mst_title
 	width: 100%
 	margin: 10px
 	font-size: 2rem
@@ -23,29 +24,25 @@
 	text-align: center
 	text-shadow: 0 0 1px #E43533
 
-.col
-	display: flex
-	justify-content: space-between
-
-.col-subtitle
+.col_subtitle
 	color: #F6F4F3
 	text-align: center
 	margin: 0 0 10px 0
 	
-.col-text
+.col_text
 	font-size: 0.8rem	
 	
-.col-text-center
+.col_text-center
 	margin: 2% 5% 
 	font-size: 1.3rem
 	color: #ffffff
 
-.col-text-after
+.col_text-after
 	margin: 0 5%
 	font-size: 0.9rem
 	color: #ffffff	
 	
-.col-left
+.col_left
 	height: 100%
 	min-height: 80vh
 	width: 15vw
@@ -54,7 +51,7 @@
 	padding: 10px
 	background: #074770
 	
-.col-mid
+.col_mid
 	height: 100%
 	min-height: 80vh
 	width: 100%
@@ -62,7 +59,7 @@
 	padding: 20px
 	background: #5b0f13
 	
-.col-right
+.col_right
 	height: 100%
 	min-height: 80vh
 	width: 15vw
@@ -72,19 +69,90 @@
 	background: #074770
 
 @media (max-width: 640px)
-	.mst-wrapper
+	.mst_wrapper
 		padding: 0
 
-	.col
+
+//The First Way - Flex
+
+.a-col	
+	display: flex
+	justify-content: space-between
+
+.a-col_subtitle
+	@extend .col_subtitle
+	
+.a-col_text
+	@extend .col_text
+	
+.a-col_text-center
+	@extend .col_text-center
+
+.a-col_text-after
+	@extend .col_text-after
+	
+.a-col_left
+	@extend .col_left
+	
+.a-col_mid
+	@extend .col_mid
+	
+.a-col_right
+	@extend .col_right
+	
+@media (max-width: 640px)
+	
+	.a-col
 		flex-direction: column
 
-	.col-left,
-	.col-mid,
-	.col-right
+	.a-col_left,
+	.a-col_mid,
+	.a-col_right
 		width: 100%
 		height: auto
 		min-height: 20vh
 		margin: 10px 0
+
+
+//The Second Way - Float
+
+.b-col	
+	display: flex
+	justify-content: space-between
+
+.b-col_subtitle
+	@extend .col_subtitle
 	
+.b-col_text
+	@extend .col_text
+	
+.b-col_text-center
+	@extend .col_text-center
+
+.b-col_text-after
+	@extend .col_text-after
+	
+.b-col_left
+	@extend .col_left
+	
+.b-col_mid
+	@extend .col_mid
+	background: #323468
+	
+.b-col_right
+	@extend .col_right
+	
+@media (max-width: 640px)
+	
+	.b-col
+		flex-direction: column
+
+	.b-col_left,
+	.b-col_mid,
+	.b-col_right
+		width: 100%
+		height: auto
+		min-height: 20vh
+		margin: 10px 0
 
 
