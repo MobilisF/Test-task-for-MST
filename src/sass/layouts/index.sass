@@ -7,27 +7,39 @@
 
 .mst
 	font-family: 'Open Sans', sans-serif
-
+	
 .mst_wrapper
 	height: auto
 	min-height: 100vh
-	min-width: 100vw
-	padding: 10px
-	background: #D7DBD2
+	width: 100vw
+	padding: 10px 20px 10px 10px
+	background: url('../images/wallpaper.jpg') no-repeat
+	background-size: cover
+	background-position: fixed
 	border-bottom: 2px solid #ffffff
+
 
 .mst_title
 	width: 100%
-	margin: 10px
-	font-size: 2rem
+	margin: 0 5px 15px 5px
+	font:
+		size: 2rem
+		weight: 300
 	letter-spacing: 3px
 	text-align: center
-	text-shadow: 0 0 1px #E43533
+	text-shadow: 0 0 15px #ffffff
 
 .col_subtitle
-	color: #F6F4F3
 	text-align: center
-	margin: 0 0 10px 0
+	margin: 0 20% 10px 20%
+	border-bottom: 1px ridge #A6A6A6
+
+.col_subtitle-center
+	text-align: center
+	color: #81c483
+	font:
+		weight: 600
+		size: 2.2rem
 	
 .col_text
 	font-size: 0.8rem	
@@ -35,21 +47,25 @@
 .col_text-center
 	margin: 2% 5% 
 	font-size: 1.3rem
-	color: #ffffff
+	color: #000000
 
 .col_text-after
 	margin: 0 5%
 	font-size: 0.9rem
-	color: #ffffff	
+	color: #000000
 	
-.col_left
+.col_left,
+.col_right	
 	height: 100%
 	min-height: 80vh
 	width: 15vw
 	min-width: 100px
 	margin: 10px
 	padding: 10px
-	background: #074770
+	background: rgba(255,255,255, 0.75)
+	border: 1px ridge #2E2C26
+	border-radius: 20px
+
 	
 .col_mid
 	height: 100%
@@ -57,16 +73,10 @@
 	width: 100%
 	margin: 10px
 	padding: 20px
-	background: #5b0f13
+	background: rgba(255,255,255, 0.97)
+	border: 1.5px groove #2E2C26
+	border-radius: 20px
 	
-.col_right
-	height: 100%
-	min-height: 80vh
-	width: 15vw
-	min-width: 100px
-	margin: 10px
-	padding: 10px
-	background: #074770
 
 @media (max-width: 640px)
 	.mst_wrapper
@@ -81,6 +91,9 @@
 
 .a-col_subtitle
 	@extend .col_subtitle
+	
+.a-col_subtitle-center
+	@extend .col_subtitle-center
 	
 .a-col_text
 	@extend .col_text
@@ -112,13 +125,14 @@
 		height: auto
 		min-height: 20vh
 		margin: 10px 0
+		border: none
 
 
 //The Second Way - Float
 
 .b-col	
-	display: flex
-	justify-content: space-between
+	//display: flex
+	//justify-content: space-between
 
 .b-col_subtitle
 	@extend .col_subtitle
@@ -145,7 +159,7 @@
 @media (max-width: 640px)
 	
 	.b-col
-		flex-direction: column
+		//flex-direction: column
 
 	.b-col_left,
 	.b-col_mid,
