@@ -3,11 +3,29 @@
 	margin: 0
 	padding: 0
 
-// Шаблон колонок, после чего в зависимости от способа решения задачи шаблону добавляется префикс a-, либо b- либо с- и тд. После чего используем директиву @extend и дополняем код в зависимости от случая.
-
 .mst
 	font-family: 'Open Sans', sans-serif
-	
+
+.mst_intro-col
+	display: flex
+	justify-content: center
+	overflow: hidden
+	height: 100vh
+	width: 100vw
+	padding: 100px 25%
+	background: url('../images/forest.jpg') no-repeat
+	background-size: cover
+	border-bottom: 1px solid #ffffff
+	text-transform: uppercase
+
+.intro-title
+	font:
+		size: 2.3rem
+		weight: 600
+	color: #ffffff
+	text-align: center
+	line-height: 3rem
+
 .mst_wrapper
 	height: auto
 	min-height: 100vh
@@ -16,8 +34,9 @@
 	background: url('../images/wallpaper.jpg') no-repeat
 	background-size: cover
 	background-position: fixed
-	border-bottom: 2px solid #ffffff
+	border-bottom: 1px solid #ffffff
 
+// Шаблон колонок, после чего в зависимости от способа решения задачи шаблону добавляется префикс a-, либо b- либо с- и тд. После чего используем директиву @extend и дополняем код в зависимости от случая.
 
 .mst_title
 	width: 100%
@@ -65,7 +84,6 @@
 	background: rgba(255,255,255, 0.75)
 	border: 1px ridge #2E2C26
 	border-radius: 20px
-
 	
 .col_mid
 	height: 100%
@@ -79,8 +97,14 @@
 	
 
 @media (max-width: 640px)
+	.intro-title
+		font-size: 1.7rem
+
 	.mst_wrapper
 		padding: 0
+
+	.col_mid
+		padding: 10px
 
 
 //The First Way - Flex
@@ -131,11 +155,14 @@
 //The Second Way - Float
 
 .b-col	
-	//display: flex
+	display: inline-block
 	//justify-content: space-between
 
 .b-col_subtitle
 	@extend .col_subtitle
+	
+.b-col_subtitle-center
+	@extend .col_subtitle-center	
 	
 .b-col_text
 	@extend .col_text
@@ -148,18 +175,23 @@
 	
 .b-col_left
 	@extend .col_left
-	
+	width: 11vw
+	float: left
+
 .b-col_mid
 	@extend .col_mid
-	background: #323468
+	max-width: 70vw
+	min-width: 20vw
+	float: left
 	
 .b-col_right
 	@extend .col_right
-	
+	float: left
+	width: 11vw
+
 @media (max-width: 640px)
-	
-	.b-col
-		//flex-direction: column
+	.b-col_mid
+		width: 100%
 
 	.b-col_left,
 	.b-col_mid,
@@ -168,5 +200,6 @@
 		height: auto
 		min-height: 20vh
 		margin: 10px 0
+		border: none
 
 
