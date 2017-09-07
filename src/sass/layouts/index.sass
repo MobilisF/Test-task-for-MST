@@ -153,11 +153,9 @@
 
 
 //The Second Way - Float
-
-.b-col	
-	display: inline-block
-	//justify-content: space-between
-
+.b-col
+	overflow: hidden
+	
 .b-col_subtitle
 	@extend .col_subtitle
 	
@@ -196,6 +194,60 @@
 	.b-col_left,
 	.b-col_mid,
 	.b-col_right
+		width: 100%
+		height: auto
+		min-height: 20vh
+		margin: 10px 0
+		border: none
+
+
+//The Third Way - Grid
+.c-col
+	display: grid
+	grid-template-columns: 1fr 6fr 1fr
+	grid-column-gap: 10px;
+
+.c-col_subtitle
+	@extend .col_subtitle
+	
+.c-col_subtitle-center
+	@extend .col_subtitle-center	
+	
+.c-col_text
+	@extend .col_text
+	
+.c-col_text-center
+	@extend .col_text-center
+
+.c-col_text-after
+	@extend .col_text-after
+	
+.c-col_left
+	@extend .col_left
+	margin: 0
+
+.c-col_mid
+	@extend .col_mid
+	margin: 0
+	
+.c-col_right
+	@extend .col_right
+	margin: 0
+ul
+	margin: 2% 10% 
+	font-size: 0.9rem
+
+@media (max-width: 640px)
+	.c-col
+		display: flex
+		flex-direction: column
+	
+	.c-col_mid
+		width: 100%
+
+	.c-col_left,
+	.c-col_mid,
+	.c-col_right
 		width: 100%
 		height: auto
 		min-height: 20vh
