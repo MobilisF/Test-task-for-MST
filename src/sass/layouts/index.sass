@@ -5,6 +5,7 @@
 
 .mst
 	font-family: 'Open Sans', sans-serif
+	overflow-x: hidden
 
 .mst_intro-col
 	display: flex
@@ -37,7 +38,7 @@
 	border-bottom: 1px solid #ffffff
 
 // Шаблон колонок, после чего в зависимости от способа решения задачи шаблону добавляется префикс a-, либо b- либо с- и тд. После чего используем директиву @extend и дополняем код в зависимости от случая.
-
+.mst-slider_header,
 .mst_title
 	width: 100%
 	margin: 0 5px 15px 5px
@@ -253,5 +254,79 @@ ul
 		min-height: 20vh
 		margin: 10px 0
 		border: none
+
+
+// Slider on jQuery
+
+//@supports(display: grid)
+	.support-warning 
+		display: none
+	.grid
+		display: grid
+
+.mst-slider
+	display: flex
+	justify-content: center
+	align-items: center
+	flex-direction: column
+	height: 100vh
+	width: 100vw
+	padding: 20px 30px 10px 10px
+	background: radial-gradient(90% 95%, #FAECD5, #CAE4D8)
+	border-bottom: 1px solid #ffffff
+
+.mst-slider_wrap
+	//max-width: 1690px
+	width: 100%
+	max-height: 881px
+	height: 100%
+	background: gray
+
+.mst-slide
+	display: grid
+	grid-template-columns: 4fr 1fr 1fr 
+	grid-template-rows: 1fr
+	grid-column-gap: 10px
+	grid-row-gap: 1px
+
+.l-span-column-2
+	grid-column-start: span 2
+
+.l-span-row-2
+	 grid-row-start: span 4
+
+.mst-slide_main
+	//width: 1320px
+	//width: 100%
+	//height: 881px
+	//height: 100%
+	background: red
+
+
+.mst-slide_one,
+.mst-slide_two,
+.mst-slide_three,
+.mst-slide_four
+	//max-width: 340px
+	//width: 100%
+	//max-height: 200px
+	//height: 100%
+	//background-size: cover
+
+
+.slider-img
+	max-width: 340px
+	width: 100%
+	max-height: 200px
+	height: 100%
+	background-size: cover
+
+
+
+
+
+
+
+
 
 

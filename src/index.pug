@@ -11,7 +11,6 @@ html
 
 	body
 		include pug/svg.pug
-
 		.mst
 			.mst_intro-col
 				h1.intro-title Способы позиционированя блочных элементов в CSS
@@ -29,8 +28,7 @@ html
 						p.a-col_text-after При ширине экрана меньше 640px делаем колонки для удобства чтения. Свойство flex-direction определяет, каким образом flex-элементы укладываются во flex-контейнере, задавая направление главной оси flex-контейнера. Они могут располагаться в двух главных направлениях — горизонтально, как строки или вертикально, как колонки. 
 					article.a-col_right
 						h2.a-col_subtitle Fixed
-						p.a-col_text Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
-						
+						p.a-col_text Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.		
 			.mst_wrapper
 				h1.mst_title Второй способ
 				.b-col
@@ -43,8 +41,7 @@ html
 						p.b-col_text-after Свойство float в CSS занимает особенное место. До его появления расположить два блока один слева от другого можно было лишь при помощи таблиц. Но в его работе есть ряд особенностей. Сначала мы использовали таблицы, потом обтекания (floats), позиционирование и инлайновые блоки (inline-block), но все эти методы по существу являются просто хаками и опускают много важных функциональных возможностей (например, вертикальное выравнивание).  
 					article.b-col_right
 						h2.b-col_subtitle Fixed
-						p.b-col_text Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.				
-				
+						p.b-col_text Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
 			.mst_wrapper
 				h1.mst_title Третий способ
 				.c-col
@@ -61,14 +58,35 @@ html
 								li Position: absolute. При абсолютном позиционировании элементы могут накладываться друг на друга.
 								li Clearfix и плавающие блоки.
 								li Display: table оставляет много ненужной разметки.
-								li Inline-block несут проблему с пустыми местами.
-
-						
+								li Inline-block несут проблему с пустыми местами.	
 					article.c-col_right
 						h2.c-col_subtitle Fixed
 						p.c-col_text Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.	
-						
 
+
+			.mst-slider
+				h1.mst-slider_header Слайдер на jQuery
+				.mst-slider_wrap
+					.mst-slide
+						.mst-slide_main.l-span-column-2.l-span-row-2
+						.mst-slide_one
+							img(class="slider-img l-span-column-2" src="../images/img1.jpg" alt="")
+						.mst-slide_two
+							img(class="slider-img l-span-column-2" src="../images/img2.jpg" alt="")
+						.mst-slide_three
+							img(class="slider-img l-span-column-2" src="../images/img3.jpg" alt="")
+						.mst-slide_four
+							img(class="slider-img l-span-column-2" src="../images/img4.jpg" alt="")
+						.mst-slide_invis
+						//.mst-slide_warning This demo requires CSS Grid. The current browser you're using doesn't support it and is using a Flexbox fallback. Find 
+						//a(href="https://igalia.github.io/css-grid-layout/enable.html") grid-enabled browser
+
+
+
+
+			.mst-slider
+				.mst-slider_header
+					h1.
 				
 				
 				
