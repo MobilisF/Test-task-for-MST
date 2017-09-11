@@ -6,7 +6,9 @@
     <meta http-equiv="content-type" content="text/html;charset=UTF-8">
     <title>Markup | Test task for MST</title>
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&amp;amp;subset=cyrillic" rel="stylesheet">
+    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
   </head>
   <body>
     <div class="mst">
@@ -68,7 +70,7 @@
                 <li>Position: absolute. При абсолютном позиционировании элементы могут накладываться друг на друга.</li>
                 <li>Clearfix и плавающие блоки.</li>
                 <li>Display: table оставляет много ненужной разметки.</li>
-                <li>Inline-block несут проблему с пустыми местами.	</li>
+                <li>Inline-block несут проблему с пустыми местами.</li>
               </ul>
             </p>
           </section>
@@ -82,11 +84,13 @@
         <h1 class="mst-slider_header">Слайдер на jQuery</h1>
         <div class="mst-slider_wrap">
           <div class="mst-slide">
-            <div class="mst-slide_main l-span-column-2 l-span-row-2"></div>
-            <div class="mst-slide_one"><img class="slider-img l-span-column-2" src="../images/img1.jpg" alt=""></div>
-            <div class="mst-slide_two"><img class="slider-img l-span-column-2" src="../images/img2.jpg" alt=""></div>
-            <div class="mst-slide_three"><img class="slider-img l-span-column-2" src="../images/img3.jpg" alt=""></div>
-            <div class="mst-slide_four"><img class="slider-img l-span-column-2" src="../images/img4.jpg" alt=""></div>
+            <div class="mst-slide_main"><i class="fa fa-angle-left"></i><img class="slider-main" src="../images/img-1.jpg" alt=""><i class="fa fa-angle-right"></i></div>
+            <div class="mst-slides">
+              <div class="mst-slide_one"><img class="slider-img" src="../images/img-1.jpg" alt=""></div>
+              <div class="mst-slide_two"><img class="slider-img" src="../images/img-2.jpg" alt=""></div>
+              <div class="mst-slide_three"><img class="slider-img" src="../images/img-3.jpg" alt=""></div>
+              <div class="mst-slide_four"><img class="slider-img" src="../images/img-4.jpg" alt=""></div>
+            </div>
             <div class="mst-slide_invis"></div>
             <!--.mst-slide_warning This demo requires CSS Grid. The current browser you're using doesn't support it and is using a Flexbox fallback. Find -->
             <!--a(href="https://igalia.github.io/css-grid-layout/enable.html") grid-enabled browser-->

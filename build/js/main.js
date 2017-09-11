@@ -1,4 +1,10 @@
-		<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+		$(".slider-img").click(function(){
+			$("#bigImage").attr('src', 
+				$(this).attr('src'));
+		});
+
+
+<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
 	</head>
 	<body>
 
