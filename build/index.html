@@ -83,15 +83,14 @@
       <div class="mst-slider">
         <h1 class="mst-slider_header">Слайдер на jQuery</h1>
         <div class="mst-slider_wrap">
-          <div class="mst-slide">
-            <div class="mst-slide_main"><i class="fa fa-angle-left"></i><img class="slider-main" src="../images/img-1.jpg" alt=""><i class="fa fa-angle-right"></i></div>
-            <div class="mst-slides">
-              <div class="mst-slide_one"><img class="slider-img" src="../images/img-1.jpg" alt=""></div>
-              <div class="mst-slide_two"><img class="slider-img" src="../images/img-2.jpg" alt=""></div>
-              <div class="mst-slide_three"><img class="slider-img" src="../images/img-3.jpg" alt=""></div>
-              <div class="mst-slide_four"><img class="slider-img" src="../images/img-4.jpg" alt=""></div>
-            </div>
-            <div class="mst-slide_invis"></div>
+          <div class="mst-slide_main"><i class="fa fa-angle-left left" id="backward"></i><img class="slider-main" id="mainImage" src="../images/img-1.jpg" alt=""><i class="fa fa-angle-right right" id="forward"></i></div>
+          <div class="mst-slides">
+            <div class="mst-slide_one"><img class="slider-img" id="image1" src="../images/img-1.jpg" alt=""></div>
+            <div class="mst-slide_two"><img class="slider-img" id="image2" src="../images/img-2.jpg" alt=""></div>
+            <div class="mst-slide_three"><img class="slider-img" id="image3" src="../images/img-3.jpg" alt=""></div>
+            <div class="mst-slide_four"><img class="slider-img" id="image4" src="../images/img-4.jpg" alt=""></div>
+          </div>
+          <div class="mst-slide_invis">
             <!--.mst-slide_warning This demo requires CSS Grid. The current browser you're using doesn't support it and is using a Flexbox fallback. Find -->
             <!--a(href="https://igalia.github.io/css-grid-layout/enable.html") grid-enabled browser-->
           </div>
@@ -104,6 +103,7 @@
       </div>
     </div>
     <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
     <script src="js/vendors.js"></script>
     <script src="js/main.js"></script>
   </body>

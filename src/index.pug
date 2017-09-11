@@ -66,21 +66,22 @@ html
 			.mst-slider
 				h1.mst-slider_header Слайдер на jQuery
 				.mst-slider_wrap
-					.mst-slide
-						.mst-slide_main
-							i.fa.fa-angle-left
-							img(class="slider-main" src="../images/img-1.jpg" alt="")
-							i.fa.fa-angle-right
-						.mst-slides
-							.mst-slide_one
-								img(class="slider-img" src="../images/img-1.jpg" alt="")
-							.mst-slide_two
-								img(class="slider-img" src="../images/img-2.jpg" alt="")
-							.mst-slide_three
-								img(class="slider-img" src="../images/img-3.jpg" alt="")
-							.mst-slide_four
-								img(class="slider-img" src="../images/img-4.jpg" alt="")
-						.mst-slide_invis
+					.mst-slide_main
+
+						i.fa.fa-angle-left.left#backward
+						img(class="slider-main" id="mainImage" src="../images/img-1.jpg" alt="")
+						i.fa.fa-angle-right.right#forward
+					.mst-slides
+						.mst-slide_one
+							img(class="slider-img" id="image1" src="../images/img-1.jpg" alt="")
+						.mst-slide_two
+							img(class="slider-img" id="image2" src="../images/img-2.jpg" alt="")
+						.mst-slide_three
+							img(class="slider-img" id="image3" src="../images/img-3.jpg" alt="")
+						.mst-slide_four
+							img(class="slider-img" id="image4" src="../images/img-4.jpg" alt="")
+					.mst-slide_invis
+							
 						//.mst-slide_warning This demo requires CSS Grid. The current browser you're using doesn't support it and is using a Flexbox fallback. Find 
 						//a(href="https://igalia.github.io/css-grid-layout/enable.html") grid-enabled browser
 
